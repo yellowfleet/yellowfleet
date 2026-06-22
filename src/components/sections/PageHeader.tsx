@@ -1,31 +1,89 @@
-import { Reveal } from "@/components/ui/Reveal";
+"use client";
 
-type PageHeaderProps = {
-  eyebrow: string;
-  title: string;
-  description?: string;
-};
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import { Button } from "@/components/ui/Button";
 
-export function PageHeader({ eyebrow, title, description }: PageHeaderProps) {
+const navLinks = [
+  { href: "/about", label: "About" },
+  { href: "/fleet", label: "Fleet" },
+  { href: "/projects", label: "Projects" },
+  { href: "/sustainability", label: "Sustainability" },
+];
+
+export function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
-    <section className="bg-navy px-6 pt-20 pb-16 text-white sm:pt-28 sm:pb-20">
-      <div className="mx-auto max-w-4xl text-center">
-        <Reveal>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-            {eyebrow}
-          </span>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl font-semibold sm:text-5xl">
-            {title}
-          </h1>
-        </Reveal>
-        {description && (
-          <Reveal delay={0.2}>
-            <p className="mt-4 text-white/70">{description}</p>
-          </Reveal>
-        )}
+    <header className="sticky top-0 z-50 border-b border-navy/10 bg-white/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+
+        {/* Logo */}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/yellowfleet-logo.jpg"
+            alt="YellowFleet"
+            width={120}
+            height={48}
+            className="h-10 w-auto object-contain"
+            priority
+          />
+        </Link>
+
+        {/* Desktop nav */}
+        <nav className="hidden items-center gap-8 md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-navy/70 transition-colors hover:text-navy"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <Button href="/contact" variant="primary" className="hidden px-5 py-2.5 md:inline-flex">
+            Get in touch
+          </Button>
+
+          {/* Mobile menu toggle */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-lg md:hidden"
+            aria-label="Toggle menu"
+          >
+            <span className={`h-0.5 w-5 bg-navy transition-transform duration-200 ${mobileOpen ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`h-0.5 w-5 bg-navy transition-opacity duration-200 ${mobileOpen ? "opacity-0" : ""}`} />
+            <span className={`h-0.5 w-5 bg-navy transition-transform duration-200 ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+          </button>
+        </div>
       </div>
-    </section>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="border-t border-navy/10 bg-white px-6 py-4 md:hidden">
+          <nav className="flex flex-col gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="rounded-lg px-3 py-3 text-sm font-medium text-navy/70 transition-colors hover:bg-offwhite hover:text-navy"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="mt-4 border-t border-navy/10 pt-4">
+            <Button href="/contact" variant="primary" className="w-full">
+              Get in touch
+            </Button>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
