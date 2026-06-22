@@ -5,7 +5,6 @@ import { WakeLines } from "@/components/ui/WakeLines";
 const footerLinks = [
   { href: "/about", label: "About" },
   { href: "/fleet", label: "Fleet" },
-  { href: "/projects", label: "Projects" },
   { href: "/sustainability", label: "Sustainability" },
   { href: "/contact", label: "Contact" },
 ];
