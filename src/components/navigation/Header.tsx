@@ -22,11 +22,11 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/yellowfleetlogo.jpg"
+            src="/images/yellowfleetlogo.png"
             alt="YellowFleet"
-            width={120}
-            height={48}
-            className="h-10 w-auto object-contain"
+            width={572}
+            height={436}
+            className="h-14 w-auto object-contain"
             priority
           />
         </Link>
