@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { companyInfo } from "@/content/company";
+import { Header } from "@/components/navigation/Header";
+import { Footer } from "@/components/footer/Footer";
 import "./globals.css";
 
 // NOTE: placeholder type pairing for scaffolding. Revisit during the
@@ -31,7 +33,9 @@ export default function RootLayout({
       className={`${fontSans.variable} ${fontDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        {children}
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
