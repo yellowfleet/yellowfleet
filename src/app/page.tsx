@@ -18,7 +18,7 @@ export default async function Home() {
       <VisionStatement />
       <WhyElectric />
       {featuredVessel && <FeaturedVessel vessel={featuredVessel} />}
-      <FeaturedProjects projects={featuredProjects} />
+      
       <SustainabilityImpact />
       <CTASection />
     </>
