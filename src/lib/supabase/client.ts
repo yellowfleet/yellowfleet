@@ -3,8 +3,8 @@ import { createClient, SupabaseClient } from "@supabase/supabase-js";
 let _client: SupabaseClient | null = null;
 
 /**
- * Lazy Supabase client — only initialized on first call.
- * Prevents build-time crash when env vars are not yet set.
+ * Lazy Supabase client — only initializes on first call at runtime.
+ * Prevents build-time crashes when env vars are not yet configured.
  */
 export function getSupabaseClient(): SupabaseClient {
   if (_client) return _client;
@@ -13,14 +13,15 @@ export function getSupabaseClient(): SupabaseClient {
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!supabaseUrl || !supabaseAnonKey) {
-    throw new Error("Supabase env vars are not configured.");
+    throw new Error(
+      "Missing Supabase env vars: NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY must be set."
+    );
   }
 
   _client = createClient(supabaseUrl, supabaseAnonKey);
   return _client;
 }
 
-// Keep a default export for convenience
 export const supabase = {
   from: (table: string) => getSupabaseClient().from(table),
 };
