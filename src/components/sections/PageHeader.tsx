@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/sustainability", label: "Sustainability" },
 ];
 
-export function Header() {
+export function PageHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
