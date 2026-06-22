@@ -3,8 +3,7 @@ import { getProjects } from "@/lib/queries/projects";
 import { Hero } from "@/components/sections/Hero";
 import { VisionStatement } from "@/components/sections/VisionStatement";
 import { WhyElectric } from "@/components/sections/WhyElectric";
-import { FeaturedVessel } from "@/components/sections/FeaturedVessel";
-import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
+import { FeaturedVessel } from "@/components/sections/FeaturedVessel";  
 import { SustainabilityImpact } from "@/components/sections/SustainabilityImpact";
 import { CTASection } from "@/components/sections/CTASection";
 
