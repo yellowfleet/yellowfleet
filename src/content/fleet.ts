@@ -1,33 +1,64 @@
 import { Vessel } from "@/types/vessel";
 
-/**
- * PLACEHOLDER CONTENT
- * Inspired by publicly available electric catamaran specifications.
- * Replace with real fleet data before production launch.
- * Shape matches the future Supabase `vessels` table so this file can be
- * swapped for a query with no component changes (see lib/queries/fleet.ts).
- */
 export const placeholderFleet: Vessel[] = [
   {
     id: "vessel-01",
-    name: "Surya 24",
-    description:
-      "A 24-passenger electric catamaran designed for short coastal and harbour routes, built for quiet, low-wake operation.",
-    capacity: 24,
-    range_km: 80,
-    speed_knots: 18,
-    image_url: "/images/vessels/placeholder-surya-24.jpg",
+    name: "YF Golden Crest",
+    description: "A 50-passenger electric catamaran built for coastal and harbour routes, designed for quiet, low-wake operation.",
+    capacity: 50,
+    range_km: 0,
+    speed_knots: 0,
+    image_url: "/images/vessels/golden-crest-1.jpg",
+    images: [
+      "/images/vessels/golden-crest-1.jpg",
+      "/images/vessels/golden-crest-2.jpg",
+      "/images/vessels/golden-crest-3.jpg",
+    ],
     active: true,
   },
   {
     id: "vessel-02",
-    name: "Tarang 40",
-    description:
-      "A 40-passenger electric catamaran for inter-island and water metro style routes, balancing range and capacity.",
-    capacity: 40,
-    range_km: 120,
-    speed_knots: 16,
-    image_url: "/images/vessels/placeholder-tarang-40.jpg",
+    name: "YF Solaris",
+    description: "An 80-passenger electric catamaran combining extended range with high capacity for inter-coastal routes.",
+    capacity: 80,
+    range_km: 0,
+    speed_knots: 0,
+    image_url: "/images/vessels/solaris-1.jpg",
+    images: [
+      "/images/vessels/solaris-1.jpg",
+      "/images/vessels/solaris-2.jpg",
+      "/images/vessels/solaris-3.jpg",
+    ],
+    active: true,
+  },
+  {
+    id: "vessel-03",
+    name: "YF Ecowave",
+    description: "A 100-passenger electric vessel engineered for high-frequency water metro and public transport operations.",
+    capacity: 100,
+    range_km: 0,
+    speed_knots: 0,
+    image_url: "/images/vessels/ecowave-1.jpg",
+    images: [
+      "/images/vessels/ecowave-1.jpg",
+      "/images/vessels/ecowave-2.jpg",
+      "/images/vessels/ecowave-3.jpg",
+    ],
+    active: true,
+  },
+  {
+    id: "vessel-04",
+    name: "YF Yellowtide",
+    description: "A 100-passenger flagship electric catamaran built for large-scale sustainable marine passenger transport.",
+    capacity: 100,
+    range_km: 0,
+    speed_knots: 0,
+    image_url: "/images/vessels/yellowtide-1.jpg",
+    images: [
+      "/images/vessels/yellowtide-1.jpg",
+      "/images/vessels/yellowtide-2.jpg",
+      "/images/vessels/yellowtide-3.jpg",
+    ],
     active: true,
   },
 ];

@@ -24,7 +24,7 @@ const reasons = [
 
 export function WhyElectric() {
   return (
-    <section className="bg-offwhite px-6 py-24">
+    <section className="relative z-10 bg-offwhite px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <SectionLabel>Why electric marine transport</SectionLabel>

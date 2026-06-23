@@ -6,6 +6,7 @@ export interface Vessel {
   range_km: number;
   speed_knots: number;
   image_url: string;
+  images?: string[];
   active: boolean;
   created_at?: string;
 }
