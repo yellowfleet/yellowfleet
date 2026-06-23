@@ -14,7 +14,7 @@ export function Hero() {
           className="h-full w-full object-cover object-center"
         />
         {/* Left-to-right gradient overlay: solid navy on left fading to transparent */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/10 to-transparent" />
         {/* Bottom fade into the wake section */}
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-navy to-transparent" />
       </div>
