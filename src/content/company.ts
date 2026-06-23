@@ -8,7 +8,7 @@ import { CompanyInfo } from "@/types/company";
  */
 export const companyInfo: CompanyInfo = {
   name: "YellowFleet",
-  tagline: "India's next-generation electric marine mobility company",
+  tagline: "India's next generation electric marine mobility company",
   shortDescription:
     "YellowFleet builds electric catamarans and marine mobility infrastructure for a cleaner, quieter future on India's waterways.",
   mission:
@@ -17,7 +17,7 @@ export const companyInfo: CompanyInfo = {
     "A future where electric vessels are the default choice for marine transportation across India, supporting public infrastructure like water metro systems and sustainable tourism.",
   sustainabilityCommitment:
     "Every vessel we design is built to reduce emissions, cut noise pollution, and lower the long-term operating cost of marine transport for operators and government partners alike.",
-  phone: "+91 00000 00000",
+  phone: "+91 84249 33033",
   email: "info@yellowfleet.in",
-  address: "Mumbai, Maharashtra, India",
+  address: "",
 };
