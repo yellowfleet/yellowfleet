@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden bg-navy text-white flex flex-col">
+    <section className="relative min-h-[80vh] overflow-hidden bg-navy text-white flex flex-col">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -14,14 +14,14 @@ export function Hero() {
           className="h-full w-full object-cover object-center"
         />
         {/* Left-to-right gradient overlay: solid navy on left fading to transparent */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/60 via-navy/50 to-transparent" />
         {/* Bottom fade into the wake section */}
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-navy to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-navy/65 to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-1 items-center">
-        <div className="mx-auto w-full max-w-6xl px-6 py-28 sm:py-36">
+        <div className="mx-auto w-full max-w-6xl px-6 py-28 sm:py-36 lg:px-0 lg:pl-10">
           <div className="max-w-xl">
             <Reveal direction="left">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
@@ -51,11 +51,6 @@ export function Hero() {
             </Reveal>
           </div>
         </div>
-      </div>
-
-      {/* Wake lines transitioning out of the hero */}
-      <div className="relative z-10">
-        <WakeLines className="h-32 w-full text-gold sm:h-40" stroke="currentColor" />
       </div>
     </section>
   );
