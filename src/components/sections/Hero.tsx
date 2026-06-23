@@ -11,7 +11,7 @@ export function Hero() {
         <img
           src="/images/hero-bg.png"
           alt=""
-          className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover object-right sm:object-center"
         />
         {/* Left-to-right gradient overlay: solid navy on left fading to transparent */}
         <div className="absolute inset-0 bg-gradient-to-r from-navy/60 via-navy/50 to-transparent" />
