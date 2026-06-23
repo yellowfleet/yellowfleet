@@ -9,7 +9,7 @@ export function SectionLabel({ children, tone = "gold" }: SectionLabelProps) {
     <div className="flex items-center gap-3">
       <span className={`h-px w-8 ${tone === "gold" ? "bg-gold" : "bg-navy/30"}`} />
       <span
-        className={`text-xs font-semibold uppercase tracking-[0.18em] ${color}`}
+        className={`text-xs font-semibold uppercase tracking-[] ${color}`}
       >
         {children}
       </span>

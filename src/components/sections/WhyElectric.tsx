@@ -39,13 +39,13 @@ export function WhyElectric() {
           {reasons.map((reason, i) => (
             <Reveal key={reason.metric} delay={0.1 * (i + 1)}>
               <div className="border-t-2 border-gold pt-6">
-                <div className="font-[family-name:var(--font-display)] text-3xl font-semibold text-navy">
+                <div className="font-[family-name:var(--font-display)] text-3xl font-bold text-navy">
                   {reason.metric}
                 </div>
                 <div className="mt-1 text-sm font-medium text-navy/60">
                   {reason.unit}
                 </div>
-                <p className="mt-4 text-base leading-relaxed text-navy/70">
+                <p className="mt-4 text-base leading-relaxed font-semibold text-navy/80">
                   {reason.description}
                 </p>
               </div>
