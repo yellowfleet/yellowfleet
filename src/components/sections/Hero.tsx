@@ -8,16 +8,21 @@ export function Hero() {
     <section className="relative min-h-[80vh] overflow-hidden bg-navy text-white flex flex-col">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero-bg.png"
-          alt=""
-            className="h-full w-full object-cover object-right sm:object-center"
-        />
-        {/* Left-to-right gradient overlay: solid navy on left fading to transparent */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/60 via-navy/50 to-transparent" />
-        {/* Bottom fade into the wake section */}
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-navy/65 to-transparent" />
-      </div>
+  {/* Desktop image */}
+  <img
+    src="/images/hero-bg.png"
+    alt=""
+    className="hidden h-full w-full object-cover object-center sm:block"
+  />
+  {/* Mobile image */}
+  <img
+    src="/images/hero-bg-mobile.png"
+    alt=""
+    className="block h-full w-full object-cover object-center sm:hidden"
+  />
+  <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/40 to-transparent sm:from-navy/70 sm:via-navy/20" />
+  <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-navy to-transparent" />
+</div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-1 items-center">
