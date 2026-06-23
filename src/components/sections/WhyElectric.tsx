@@ -3,20 +3,20 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const reasons = [
   {
-    metric: "Zero",
-    unit: "tailpipe emissions",
+    metric: "Zero Emmissions",
+    unit: "",
     description:
       "Electric propulsion removes diesel exhaust entirely from coastal and inland waterways.",
   },
   {
-    metric: "Near-silent",
-    unit: "at cruising speed",
+    metric: "Lower Noise",
+    unit: "",
     description:
       "No combustion noise means quieter ports, marinas, and passenger journeys.",
   },
   {
-    metric: "Lower",
-    unit: "operating cost over time",
+    metric: "Lower Cost",
+    unit: "",
     description:
       "Electric drivetrains cut fuel and maintenance costs compared to diesel engines.",
   },
@@ -45,7 +45,7 @@ export function WhyElectric() {
                 <div className="mt-1 text-sm font-medium text-navy/60">
                   {reason.unit}
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-navy/70">
+                <p className="mt-4 text-base leading-relaxed text-navy/70">
                   {reason.description}
                 </p>
               </div>
