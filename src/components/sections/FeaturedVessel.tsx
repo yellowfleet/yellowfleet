@@ -47,7 +47,7 @@ export function FeaturedVessel({ vessels }: { vessels: Vessel[] }) {
 
   return (
     <section
-      className="relative bg-navy px-6 py-24 text-white"
+      className="relative overflow-hidden bg-navy px-6 py-24 text-white"
       
     >
       <div className="fixed inset-0 z-0">
@@ -106,21 +106,20 @@ export function FeaturedVessel({ vessels }: { vessels: Vessel[] }) {
   >
     {/* Center-section prev arrow */}
     <button
-      onClick={goPrev}
-      className="absolute -left-5 top-1/2 z-10 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-gold hover:text-navy"
-      aria-label="Previous vessel"
-    >
-      ←
-    </button>
+  onClick={goPrev}
+  className="absolute left-2 top-1/2 z-10 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-navy/60 text-white backdrop-blur-sm transition-colors hover:bg-gold hover:text-navy"
+  aria-label="Previous vessel"
+>
+  ←
+</button>
 
-    {/* Center-section next arrow */}
-    <button
-      onClick={goNext}
-      className="absolute -right-5 top-1/2 z-10 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-gold hover:text-navy"
-      aria-label="Next vessel"
-    >
-      →
-    </button>
+<button
+  onClick={goNext}
+  className="absolute right-2 top-1/2 z-10 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-navy/60 text-white backdrop-blur-sm transition-colors hover:bg-gold hover:text-navy"
+  aria-label="Next vessel"
+>
+  →
+</button>
 
     <div className="grid gap-8 overflow-hidden rounded-2xl bg-white/5 p-6 sm:p-8 lg:grid-cols-2">
 
