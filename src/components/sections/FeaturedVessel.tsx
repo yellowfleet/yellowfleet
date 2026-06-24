@@ -130,7 +130,7 @@ export function FeaturedVessel({ vessels }: { vessels: Vessel[] }) {
             key={images[activeImage]}
             src={images[activeImage]}
             alt={`${vessel.name} — image ${activeImage + 1}`}
-            className="h-full w-full object-cover opacity-90 transition-opacity duration-500"
+            className="max-w-[60%] max-h-[60%] sm:max-w-full sm:max-h-full object-contain opacity-90 transition-all duration-500"
           />
           {images.length > 1 && (
             <span className="absolute bottom-3 right-3 rounded-full bg-navy/60 px-2.5 py-1 text-xs text-white/80 backdrop-blur-sm">
