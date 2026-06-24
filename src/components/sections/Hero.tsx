@@ -1,6 +1,6 @@
 import { companyInfo } from "@/content/company";
 import { Button } from "@/components/ui/Button";
-import { WakeLines } from "@/components/ui/WakeLines";
+
 import { Reveal } from "@/components/ui/Reveal";
 
 export function Hero() {
