@@ -1,14 +1,11 @@
 import { Button } from "@/components/ui/Button";
-import { WakeLines } from "@/components/ui/WakeLines";
+
 import { Reveal } from "@/components/ui/Reveal";
 
 export function CTASection() {
   return (
     <section className="relative overflow-hidden bg-gold px-6 py-24 text-navy">
-      <WakeLines
-        className="pointer-events-none absolute -bottom-10 left-1/2 h-40 w-[140%] -translate-x-1/2 text-navy"
-        stroke="currentColor"
-      />
+      
       <div className="relative mx-auto max-w-3xl text-center">
         <Reveal>
           <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold sm:text-4xl">
