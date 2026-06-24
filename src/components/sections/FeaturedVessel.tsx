@@ -121,16 +121,16 @@ export function FeaturedVessel({ vessels }: { vessels: Vessel[] }) {
   →
 </button>
 
-    <div className="grid gap-8 overflow-hidden rounded-2xl bg-white/5 p-6 sm:p-8 lg:grid-cols-2">
+    <div className="grid gap-8 overflow-hidden rounded-none bg-white/5 p-0 sm:p-0 lg:grid-cols-2">
 
       {/* Image gallery */}
       <div className="flex flex-col gap-3">
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-white/10">
+        <div className="relative  w-full h-auto overflow-hidden rounded-x1 ">
           <img
             key={images[activeImage]}
             src={images[activeImage]}
             alt={`${vessel.name} — image ${activeImage + 1}`}
-            className="max-w-[60%] max-h-[60%] sm:max-w-full sm:max-h-full object-contain opacity-90 transition-all duration-500"
+            className="max-w-[64.9%] sm:max-w-full sm:max-h-full object-contain opacity-90 transition-all duration-500"
           />
           {images.length > 1 && (
             <span className="absolute bottom-3 right-3 rounded-full bg-navy/60 px-2.5 py-1 text-xs text-white/80 backdrop-blur-sm">
