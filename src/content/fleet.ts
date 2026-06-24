@@ -15,7 +15,6 @@ export const placeholderFleet: Vessel[] = [
       "/images/vessels/golden-crest-3.png",
       "/images/vessels/golden-crest-4.png",
       "/images/vessels/golden-crest-5.png",
-      "/images/vessels/golden-crest-6.png",
       "/images/vessels/golden-crest-7.png",
 
     ],
