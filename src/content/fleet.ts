@@ -7,7 +7,7 @@ export const placeholderFleet: Vessel[] = [
     description: "A 50-passenger electric catamaran built for coastal and harbour routes, designed for quiet, low-wake operation.",
     capacity: 50,
     range_km: 0,
-    speed_knots: 0,
+    speed_knots: 12,
     image_url: "/images/vessels/golden-crest-1.jpg",
     images: [
       "/images/vessels/golden-crest-1.jpg",

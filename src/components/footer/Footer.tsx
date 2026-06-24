@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { companyInfo } from "@/content/company";
-import { WakeLines } from "@/components/ui/WakeLines";
+
 
 const footerLinks = [
   { href: "/about", label: "About" },
@@ -12,10 +12,7 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy text-white">
-      <WakeLines
-        className="pointer-events-none absolute -top-6 left-1/2 h-28 w-[140%] -translate-x-1/2 text-white"
-        stroke="currentColor"
-      />
+     
       <div className="relative mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4">
           <div className="md:col-span-2">
