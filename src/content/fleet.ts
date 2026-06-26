@@ -22,21 +22,6 @@ export const placeholderFleet: Vessel[] = [
   },
   {
     id: "vessel-02",
-    name: "YF Solaris",
-    description: "An 80-passenger electric catamaran combining extended range with high capacity for inter-coastal routes.",
-    capacity: 80,
-    range_km: 0,
-    speed_knots: 0,
-    image_url: "/images/vessels/solaris-1.png",
-    images: [
-      "/images/vessels/solaris-1.png",
-      "/images/vessels/solaris-2.png",
-      "/images/vessels/solaris-3.png",
-    ],
-    active: true,
-  },
-  {
-    id: "vessel-03",
     name: "YF Ecowave",
     description: "A 100-passenger electric vessel engineered for high-frequency water metro and public transport operations.",
     capacity: 100,
@@ -51,7 +36,7 @@ export const placeholderFleet: Vessel[] = [
     active: true,
   },
   {
-    id: "vessel-04",
+    id: "vessel-03",
     name: "YF Yellowtide",
     description: "A 100-passenger flagship electric catamaran built for large-scale sustainable marine passenger transport.",
     capacity: 100,
