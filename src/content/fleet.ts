@@ -47,6 +47,7 @@ export const placeholderFleet: Vessel[] = [
       "/images/vessels/yellowtide-1.png",
       "/images/vessels/yellowtide-2.png",
       "/images/vessels/yellowtide-3.png",
+      "/images/vessels/yellowtide-4.png",
     ],
     active: true,
   },
