@@ -32,6 +32,7 @@ export const placeholderFleet: Vessel[] = [
       "/images/vessels/ecowave-1.png",
       "/images/vessels/ecowave-2.png",
       "/images/vessels/ecowave-3.png",
+      "/images/vessels/ecowave-4.png",
     ],
     active: true,
   },
