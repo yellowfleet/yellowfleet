@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { getFleet } from "@/lib/queries/fleet";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
@@ -9,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const specs = [
-  { label: "Capacity", key: "capacity" as const, suffix: " passengers" },
-  { label: "Range", key: "range_km" as const, suffix: " km" },
-  { label: "Top speed", key: "speed_knots" as const, suffix: " knots" },
+  { label: "Capacity", key: "capacity" as const, suffix: " pax" },
+  { label: "Speed", key: "speed_knots" as const, suffix: " kn" },
+  { label: "Length", key: "length_m" as const, suffix: " M" },
 ];
 
 export default async function FleetPage() {
@@ -29,13 +30,15 @@ export default async function FleetPage() {
         <div className="mx-auto max-w-6xl space-y-px overflow-hidden rounded-2xl bg-navy/10">
           {fleet.map((vessel, i) => (
             <Reveal key={vessel.id} delay={i * 0.1}>
-              <div className="grid gap-8 bg-white p-8 sm:grid-cols-[1fr_1.2fr] sm:p-10">
+              <Link
+                href={`/fleet/${vessel.id}`}
+                className="group grid gap-8 bg-white p-8 transition-colors hover:bg-offwhite sm:grid-cols-[1fr_1.2fr] sm:p-10"
+              >
                 <div className="aspect-[4/3] overflow-hidden rounded-xl bg-offwhite">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={vessel.image_url}
                     alt={vessel.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div>
@@ -50,16 +53,21 @@ export default async function FleetPage() {
                           {spec.label}
                         </dt>
                         <dd className="mt-1 font-[family-name:var(--font-display)] text-lg font-semibold text-navy">
-                          {vessel[spec.key]}
-                          <span className="text-sm font-normal text-navy/50">
-                            {spec.suffix}
-                          </span>
+                          {vessel[spec.key] ?? "TBC"}
+                          {vessel[spec.key] ? (
+                            <span className="text-sm font-normal text-navy/50">
+                              {spec.suffix}
+                            </span>
+                          ) : null}
                         </dd>
                       </div>
                     ))}
                   </dl>
+                  <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-gold transition-all duration-200 group-hover:gap-2">
+                    View vessel details →
+                  </span>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           ))}
         </div>
