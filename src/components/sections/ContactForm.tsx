@@ -17,6 +17,10 @@ export function ContactForm() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    // Honeypot check — bots fill this, real users don't
+    const honeypot = String(formData.get("honeypot") ?? "");
+    if (honeypot) return;
+
     try {
       await submitContactInquiry({
         name: String(formData.get("name") ?? ""),
@@ -50,6 +54,15 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Honeypot — hidden from real users, bots will fill it */}
+      <input
+        type="text"
+        name="honeypot"
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+      />
+
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Name" name="name" required />
         <Field label="Email" name="email" type="email" required />
