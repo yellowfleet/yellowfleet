@@ -25,15 +25,7 @@ export function Header() {
     alt="YellowFleet"
     className="h-14 w-auto object-contain"
   />
-  <div className="flex flex-col">
-    <span className="font-[family-name:var(--font-display)] text-sm font-bold leading-tight tracking-wide">
-      <span className="text-gold">YELLOW</span>
-      <span className="text-navy">FLEET</span>
-    </span>
-    <span className="text-[16px] font-medium tracking-widest text-gold">
-      CONNECTING WATERS. MOVING PEOPLE.
-    </span>
-  </div>
+ 
 </Link>
 
         {/* Desktop nav */}
