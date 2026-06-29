@@ -30,7 +30,7 @@ export function Hero() {
           <div className="max-w-xl">
             <Reveal direction="left">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                Electric Marine Mobility · India
+                Connecting Waters. Moving people.
               </span>
             </Reveal>
 
