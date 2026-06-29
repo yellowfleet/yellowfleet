@@ -21,7 +21,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
   <img
-    src="/images/yellowfleetlogo.jpg"
+    src="/images/yellowfleetlogo.png"
     alt="YellowFleet"
     className="h-14 w-auto object-contain"
   />
