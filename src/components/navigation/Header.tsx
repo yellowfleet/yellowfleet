@@ -30,7 +30,7 @@ export function Header() {
       <span className="text-gold">YELLOW</span>
       <span className="text-navy">FLEET</span>
     </span>
-    <span className="text-[10px] font-medium tracking-widest text-gold">
+    <span className="text-[16px] font-medium tracking-widest text-gold">
       CONNECTING WATERS. MOVING PEOPLE.
     </span>
   </div>
