@@ -19,5 +19,5 @@ export const companyInfo: CompanyInfo = {
     "Every vessel we design is built to reduce emissions, cut noise pollution, and lower the long-term operating cost of marine transport for operators and government partners alike.",
   phone: "+91 84249 33033",
   email: "info@yellowfleet.in",
-  address: "",
+  address: "Floor-1, Plot-107 Riverdale Studio, Senapati Bapat Road, Mahim, Mumbai, Maharashtra, India 400016",
 };
