@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createAdminSupabaseClient } from "@/lib/supabase/admin";
+import { revalidatePath } from "next/cache";
 
 // NOTE: this route is protected by middleware.ts (matcher includes /api/admin/:path*),
 // which checks the yf_admin_session cookie before requests reach here.
@@ -52,5 +53,8 @@ export async function POST(request: NextRequest) {
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
+
+  revalidatePath("/fleet");
+
   return NextResponse.json({ vessel: data }, { status: 201 });
 }

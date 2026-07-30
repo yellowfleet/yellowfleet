@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createAdminSupabaseClient } from "@/lib/supabase/admin";
+import { revalidatePath } from "next/cache";
 
 type Params = { params: Promise<{ id: string }> };
 
@@ -57,6 +58,10 @@ export async function PATCH(request: NextRequest, { params }: Params) {
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
+
+  revalidatePath("/fleet");
+  revalidatePath(`/fleet/${id}`);
+
   return NextResponse.json({ vessel: data });
 }
 
@@ -68,5 +73,8 @@ export async function DELETE(_request: NextRequest, { params }: Params) {
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
+
+  revalidatePath("/fleet");
+
   return NextResponse.json({ ok: true });
 }
