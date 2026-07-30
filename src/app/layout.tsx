@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import { companyInfo } from "@/content/company";
-import { Header } from "@/components/navigation/Header";
-import { Footer } from "@/components/footer/Footer";
+import { getCompanyInfo } from "@/lib/queries/company";
 import "./globals.css";
 
-// NOTE: placeholder type pairing for scaffolding. Revisit during the
-// dedicated visual design pass (see frontend-design direction).
 const fontSans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -17,10 +13,13 @@ const fontDisplay = Space_Grotesk({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: `${companyInfo.name} | ${companyInfo.tagline}`,
-  description: companyInfo.shortDescription,
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const company = await getCompanyInfo();
+  return {
+    title: `${company.name} | ${company.tagline}`,
+    description: company.shortDescription,
+  };
+}
 
 export default function RootLayout({
   children,
@@ -33,9 +32,7 @@ export default function RootLayout({
       className={`${fontSans.variable} ${fontDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
