@@ -8,7 +8,7 @@ import { CompanyInfo } from "@/types/company";
  */
 export const companyInfo: CompanyInfo = {
   name: "YellowFleet",
-  tagline: "India's next generation electric marine mobility company",
+  tagline: "India's next generation electric marine ",
   shortDescription:
     "YellowFleet builds electric catamarans and marine mobility infrastructure for a cleaner, quieter future on India's waterways.",
   mission:
